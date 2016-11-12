@@ -1,0 +1,45 @@
+<h1>EM Education</h1>
+<h2>The best lesson plans for engagement and mastery</h2>
+
+
+<% materialsMat = [] %>
+<% materialsMat[0] = ["Study Guide 1 ~ Evaluate Expressions that include Negative Numbers",
+        '/Study_Guides/SG_1_Eval_Express_w_Neg_Nums.docx',
+        'SG_1_Eval_Express_w_Neg_Nums.docx'] %>
+<% materialsMat[1] = ["Study Guide 174 ~ Meet the Distributive Property",
+        '/Study_Guides/SG_174_Meet_the_Distributive_Property.docx',
+        '/Study_Guides/SG_174_Meet_the_Distributive_Property.docx'] %>
+        
+<h2>Example Study Guide</h2>
+<p>This study guide demonstrates all the features of a quality study guide.</p>
+<%= link_to "Study Guide 174 ~ Meet the Distributive Property", 
+    '/Study_Guides/SG_174_Meet_the_Distributive_Property.docx',
+    :download => "SG_174_Meet_the_Distributive_Property.docx" %>
+
+<h2>Ideals for Study Guides</h2>
+<p>Teachers submitting study guides for consideration should keep the following ideals in mind:</p>
+<ul>
+    <li>Interesting Opening</li>
+    <li>Begin with a context or diagram, whenever possible.</li>
+    <li>Encourage students to respond with figures or diagrams when appropriate.</li>
+    <li>Provide an answer key, or some other way for student to assess their
+    understanding.</li>
+    <li>In the future, EM Education will strive for attractive presentation and
+    interesting graphics and pictures to highlight the content. But for now, we
+    are happy to receive collections of well-designed questions.</li>
+</ul>
+
+<h2>Study Guides Designed to Use with Desk Consultants</h2>
+<p>Of course, these materials are not required. Teachers can successfully run a 
+Desk Consultants activity with many different materials that you 
+already have.</p>
+
+<ul>
+<% materialsMat.each do |mat| %>   
+    <li>
+        <%= link_to mat[0], 
+        mat[1],
+        :download => mat[2] %>
+    </li>
+<% end %>
+</ul>
